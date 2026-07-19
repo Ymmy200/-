@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Alguien Especial</title>
+    
+    <!-- Fuentes desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Enlace al archivo de estilos externos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Elementos decorativos de fondo -->
+     <div class="decoracion-fondo" id="contenedor-corazones"></div>
+    <div class="decoracion-fondo">
+        <div class="brillo" style="width: 80px; height: 80px; top: 15%; left: 10%; animation-delay: 0s;"></div>
+        <div class="brillo" style="width: 120px; height: 120px; top: 60%; left: 80%; animation-delay: 2s;"></div>
+        <div class="brillo" style="width: 60px; height: 60px; top: 75%; left: 15%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Contenedor Principal de la Carta -->
+    <main class="carta-container">
+        <h1>Mi querida Alisson</h1>
+        
+        <p class="texto-carta">
+         Aylu, ¿cómo estás? Quería escribirte antes del partido. No te quiero arruinar el día con mi mensaje ni con mi presencia, al contrario, quería dejar en claro lo mucho que me importas.
+
+Lo de ayer fue algo realmente estúpido de mi parte. Claramente tú podías decir lo que quisieras y esa no fue la forma de actuar. Soy muy inexperto en muchos temas y, a lo largo del tiempo, he aprendido muchas cosas que tú misma me has hecho caer en cuenta. Obviamente sigo sin ser perfecto, sigo cometiendo errores y sé que no va a ser fácil, que va a ser muy difícil y que vamos a tener que trabajar en esto todos los días, pero de verdad quiero hacerlo porque te quiero a ti. Quiero todo de ti, para siempre, tú y yo, todos los días. No tengo problema en aprender de mis errores, en cambiarlos y en esforzarme por ser el hombre que una mujer tan maravillosa como tú merece.
+
+Siento mucho las decepciones que te genero. Sé que los dos ya queremos que llegue nuestro momento, pero por X o Y situaciones siempre termina no siendo, y me da mucho miedo que te canses de esto, que te canses de hablarme. A mí me frustra demasiado la situación porque me aterra que sientas que son las mismas palabras vacías de siempre. Me duele saber que a veces no notas los esfuerzos que hago para estar contigo, pero si tú lo dices es por algo; sé que debo dejar de ser tan egoísta y parar de ver solo mi lado de la historia. Eres una gran mujer, tienes un corazón gigante y una forma hermosa de tratar a los demás que te hace única. Eres fuerte, responsable, guapísima y de verdad admiro mucho tu valentía y la persona tan increíble que eres. Me siento muy afortunado de tenerte en mi vida.
+
+Aunque todo eso pase por esa cabecita, quiero que sepas que todos los días trato de ser mejor para ti. Desde que llegaste, mis días tienen por completo tu costumbre. Apareces en mi primer sorbo de café, en las canciones que ni sabía que me gustaban, y en esos silencios donde uno se encuentra consigo mismo y, aun así, termino encontrándote a ti. Todos los días pienso en qué cosa te haría feliz, todos los días pienso en tus ojos, espero tu mensaje y me muero por estar contigo. Entre millones de personas, eres la única con la que me gustaría compartir una noche de lluvia, una conversación interminable y el último pedazo de cualquier cosa.
+
+Cuando estamos enojados las cosas no son como siempre: todo pasa más lento, todo pesa más y la gente es menos soportable. Pero luego abro WhatsApp, veo un mensaje tuyo y todo cambia. De repente ya quiero llegar a mi casa a descansar para poder hablar contigo con la mejor actitud; de repente me gusta Roblox, de repente disfruto del reggaetón de mujeres y de repente tu risa es lo único que importa. Lo más difícil de mi día termina siendo pensar qué chiste contarte solo para poder escuchar esa risita que tanto me fascina.
+
+Te pido que no te vayas, niña. Yo estoy dispuesto a darlo todo por estar contigo, a aprender lo que haga falta y a cuidar lo nuestro.
+        </p>
+        
+        <span class="corazon-decorativo">❤</span>
+    </main>
+
+    <!-- Sección de Música -->
+    <div class="reproductor-musica">
+        <!-- Reemplaza "musica.mp3" por el nombre de tu canción -->
+        <audio id="cancion-fondo" src="Rusowsky, LATIN MAFIA - Neo Roneo (Letra).mp3" loop></audio>
+        
+        <button class="btn-play-pause" id="btn-control">▶</button>
+        
+        <div class="control-volumen">
+            <span>🔈</span>
+            <input type="range" id="slider-volumen" min="0" max="1" step="0.1" value="0.5">
+            <span>🔊</span>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo de lógica JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+:root {
+    --rosa-pastel: #ffe5ec;
+    --rosa-medio: #ffb3c6;
+    --rosa-oscuro: #fb6f92;
+    --texto-color: #4a3e41;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, var(--rosa-pastel), #fff0f3);
+    color: var(--texto-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- Fondo Animado (Lluvia) --- */
+.decoracion-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.corazon-cayendo {
+    position: absolute;
+    top: -20px;
+    pointer-events: none;
+    animation: caer linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* --- Contenedor de la Carta --- */
+.carta-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(251, 111, 146, 0.15);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid rgba(251, 111, 146, 0.2);
+    z-index: 10;
+    animation: entradaSuave 1.2s ease-out;
+}
+
+@keyframes entradaSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: var(--rosa-oscuro);
+    margin-bottom: 25px;
+}
+
+.texto-carta {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: left;
+    white-space: pre-line;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.corazon-decorativo {
+    color: var(--rosa-oscuro);
+    font-size: 1.5rem;
+    animation: latido 1.5s infinite;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* --- Reproductor de Música --- */
+.reproductor-musica {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--rosa-medio);
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+.btn-play-pause {
+    background: var(--rosa-oscuro);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-play-pause:hover {
+    background: #e05375;
+    transform: scale(1.05);
+}
+
+.control-volumen {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--texto-color);
+}
+
+.control-volumen input[type="range"] {
+    accent-color: var(--rosa-oscuro);
+    cursor: pointer;
+    width: 80px;
+}
+
+/* --- Ajustes Responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 2.5rem; }
+    .carta-container { padding: 25px 20px; }
+    .texto-carta { font-size: 1.05rem; line-height: 1.6; }
+    .reproductor-musica { padding: 10px 20px; width: 100%; justify-content: center; }
+}
